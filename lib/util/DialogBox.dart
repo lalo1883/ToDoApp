@@ -31,16 +31,13 @@ class Dialogbox extends StatelessWidget {
                 Container(
                   color: Colors.white,
                     child: TextButton(
-                      onPressed: (){
-                        controller.clear();
-
-                      },
+                      onPressed: onSave,
                       child: Text("Save", style: TextStyle(color: Colors.black),),)),
                 SizedBox(width: 8),
                 Container(
                   color: Colors.white,
                     child: TextButton(
-                      onPressed: (){},
+                      onPressed: onCancel,
                       child: Text("Cancel", style: TextStyle(color: Colors.black),),)),
               ],
             )

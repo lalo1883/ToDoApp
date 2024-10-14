@@ -29,6 +29,7 @@ class _ToDoPageState extends State<home_page> {
   }
 
   void addTask(){
+    print("addTask pushed");
     setState(() {
       toDoList.add([_controller.text, false]);
       Navigator.of(context).pop();
@@ -36,6 +37,7 @@ class _ToDoPageState extends State<home_page> {
   }
 
   void returnToMain(){
+    print("returnToMain pushed");
     Navigator.of(context).pop();
   }
 
