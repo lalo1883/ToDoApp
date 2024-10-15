@@ -19,24 +19,36 @@ class Dialogbox extends StatelessWidget {
             TextField(
               controller: controller,
               decoration: InputDecoration(
-                  border:OutlineInputBorder(),
-                hintText: "Type a task"
+                filled: true,
+                fillColor: Colors.blueGrey[100],
+                border: OutlineInputBorder(
+                  borderSide: BorderSide.none,
+                  borderRadius: BorderRadius.circular(14),
+                ),
               ),
             ),
-            SizedBox( height: 40),
+            SizedBox( height: 20),
             Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
-                  color: Colors.white,
-                    child: TextButton(
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(4),
+                          )
+                      ),
                       onPressed: onSave,
                       child: Text("Save", style: TextStyle(color: Colors.black),),)),
                 SizedBox(width: 8),
                 Container(
-                  color: Colors.white,
-                    child: TextButton(
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(4),
+                          )
+                      ),
                       onPressed: onCancel,
                       child: Text("Cancel", style: TextStyle(color: Colors.black),),)),
               ],
